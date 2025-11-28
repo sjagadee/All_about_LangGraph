@@ -9,6 +9,7 @@ dependencies = [
     "langchain-community>=0.4.1",
     "langchain-tavily>=0.2.13",
     "langchain[google-genai,openai]>=1.1.0",
+    "langsmith>=0.4.49",
     "requests>=2.32.5",
     "wikipedia>=1.4.0",
     "youtube-search>=2.1.2",
