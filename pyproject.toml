@@ -6,11 +6,9 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
+    "langchain>=1.1.0",
     "langchain-community>=0.4.1",
+    "langchain-google-genai>=3.2.0",
+    "langchain-openai>=1.1.0",
     "langchain-tavily>=0.2.13",
-    "langchain[google-genai,openai]>=1.1.0",
-    "langsmith>=0.4.49",
-    "requests>=2.32.5",
-    "wikipedia>=1.4.0",
-    "youtube-search>=2.1.2",
 ]
