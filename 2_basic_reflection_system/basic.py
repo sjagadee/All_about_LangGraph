@@ -3,10 +3,12 @@ from langchain_core.messages import BaseMessage, HumanMessage
 
 from typing import List, Sequence
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 from chains import generation_chain, reflection_chain
+os.environ["LANGCHAIN_PROJECT"] = "Reflection Agentic Pattern"
 
 graph = StateGraph(MessagesState)
 
@@ -20,7 +22,9 @@ def generate_node(state):
 
 def reflect_node(state):
     response = reflection_chain.invoke(state)
-    return {"messages": [HumanMessage(content=response.content)]}
+    # Ensure content is not empty to prevent API errors
+    content = response.content if response.content else "Please provide feedback on the generated post."
+    return {"messages": [HumanMessage(content=content)]}
 
 def should_continue(state):
     if len(state['messages']) > 4:
