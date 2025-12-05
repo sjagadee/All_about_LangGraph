@@ -5,3 +5,4 @@ islr.pdf
 *.indices
 .venv
 langgraph_ete.egg-info
+checkpoints.sqlite

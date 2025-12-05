@@ -15,4 +15,5 @@ dependencies = [
     "langchain-openai>=1.1.0",
     "langchain-tavily>=0.2.13",
     "langgraph>=1.0.4",
+    "langgraph-checkpoint-sqlite>=3.0.0",
 ]
