@@ -42,6 +42,7 @@ graph.add_edge("tools", "generate")
 graph.add_edge("generate", END)
 
 # initialize memory using direct connection
+# check_same_thread=False is required because it make other threads make modifications to the database
 conn = sqlite3.connect("checkpoints.sqlite", check_same_thread=False)
 memory = SqliteSaver(conn)
 
